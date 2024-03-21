@@ -19,15 +19,25 @@ export default function UrlManager({ urls }: Props) {
 
   return (
     <section className="mx-auto my-10">
-      <div className="flex gap-2 mb-2">
-        <Checkbox
-          id="onlyError"
-          checked={onlyError}
-          onCheckedChange={() => setOnlyError((prev) => !prev)}
-        />
-        <Label htmlFor="onlyError" className="cursor-pointer">
-          Only url with error
-        </Label>
+      <div className="flex justify-between">
+        <div className="flex gap-2 mb-2">
+          <Checkbox
+            id="onlyError"
+            checked={onlyError}
+            onCheckedChange={() => setOnlyError((prev) => !prev)}
+          />
+          <Label htmlFor="onlyError" className="cursor-pointer">
+            Only url with error
+          </Label>
+        </div>
+
+        <div>
+          <p className="text-sm">
+            {" "}
+            Number of url {urls.length}, Number of url with missing utm :{" "}
+            {urls.filter((url) => url.missingParameters.length > 0).length}
+          </p>
+        </div>
       </div>
 
       <DataTable columns={columns} data={urlsToShow} />
