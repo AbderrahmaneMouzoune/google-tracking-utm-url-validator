@@ -25,7 +25,7 @@ export default function Home() {
       <section>
         {urlError.length > 0 &&
           <ul>
-            {urlError.map((url, i) => <li key={`url-${url}-${i}`}>{url.url} as {url.missingParameters.length}</li>)}
+            {urlError.filter(url => url.missingParameters.length > 0).map((url, i) => <li key={`url-${url}-${i}`}>{url.url} got {url.missingParameters.length} missing parameters</li>)}
           </ul>
         }
       </section>
