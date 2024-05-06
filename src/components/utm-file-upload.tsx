@@ -20,6 +20,9 @@ export default function UtmFileUpload({
   }
 
   const dropZoneConfig = {
+    accept: {
+      "text/html": [".html", ".htm", ".txt", ".md", ".markdown"],
+    },
     maxFiles: 5,
     maxSize: 1024 * 1024 * 4,
     multiple: true,
@@ -70,11 +73,10 @@ const FileSvgDraw = () => {
         />
       </svg>
       <p className="mb-1 text-sm text-gray-500 dark:text-gray-400">
-        <span className="font-semibold">Click to upload</span>
-        &nbsp; or drag and drop
+        <span className="font-semibold">Click to upload</span> or drag and drop
       </p>
       <p className="text-xs text-gray-500 dark:text-gray-400">
-        SVG, PNG, JPG or GIF
+        .HTML, .HTM, .MD, .MARKDOWN or .TXT
       </p>
     </>
   )

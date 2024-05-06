@@ -5,7 +5,7 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Utm checker",
+  title: "Google Tracking UTM URL Validator",
   description: "Simple tool to check if you miss some utm marketing link",
 }
 
