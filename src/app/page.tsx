@@ -29,7 +29,7 @@ export default function Home() {
         Google Tracking UTM URL Validator
       </h1>
 
-      <div>
+      <section>
         <p>
           The Google Tracking URL Validator is a handy tool designed for
           validating URLs within files or text strings to ensure they are
@@ -50,7 +50,7 @@ export default function Home() {
             standards.
           </li>
         </ol>
-      </div>
+      </section>
 
       <form onSubmit={handleSubmitForm} className="mt-5">
         <section className="grid grid-cols-2 gap-5">
@@ -67,7 +67,7 @@ export default function Home() {
 
       {urlsWithErrors && <UrlManager urls={urlsWithErrors} />}
 
-      <div>
+      <section>
         <br />
 
         <h2>Functionality</h2>
@@ -121,7 +121,7 @@ export default function Home() {
           effectiveness of data-driven marketing efforts utilizing Google
           Analytics.
         </p>
-      </div>
+      </section>
     </main>
   )
 }
