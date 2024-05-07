@@ -50,7 +50,24 @@ export default function Home() {
             standards.
           </li>
         </ol>
+      </div>
 
+      <form onSubmit={handleSubmitForm} className="mt-5">
+        <section className="grid grid-cols-2 gap-5">
+          <Textarea
+            placeholder="Mettre le texte à vérifier ici"
+            onChange={(e) => setStringToCheck(e.currentTarget.value)}
+          />
+          <UtmFileUpload addFiles={setFiles} />
+        </section>
+        <Button type="submit" className="mt-2">
+          Check all the url
+        </Button>
+      </form>
+
+      {urlsWithErrors && <UrlManager urls={urlsWithErrors} />}
+
+      <div>
         <br />
 
         <h2>Functionality</h2>
@@ -105,21 +122,6 @@ export default function Home() {
           Analytics.
         </p>
       </div>
-
-      <form onSubmit={handleSubmitForm} className="mt-5">
-        <section className="grid grid-cols-2 gap-5">
-          <Textarea
-            placeholder="Mettre le texte à vérifier ici"
-            onChange={(e) => setStringToCheck(e.currentTarget.value)}
-          />
-          <UtmFileUpload addFiles={setFiles} />
-        </section>
-        <Button type="submit" className="mt-2">
-          Check all the url
-        </Button>
-      </form>
-
-      {urlsWithErrors && <UrlManager urls={urlsWithErrors} />}
     </main>
   )
 }
