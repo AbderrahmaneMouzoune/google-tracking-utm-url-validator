@@ -68,7 +68,7 @@ export default function Home() {
           <li>
             <strong>Error Reporting:</strong> If any URLs are found to be
             missing required tracking parameters, the tool generates a report
-            highlighting these discrepancies for the user's attention.
+            highlighting these discrepancies for the user&apos;s attention.
           </li>
           <li>
             <strong>Output:</strong> Users receive a comprehensive report
