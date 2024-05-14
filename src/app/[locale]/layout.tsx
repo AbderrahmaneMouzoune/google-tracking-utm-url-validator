@@ -4,6 +4,8 @@ import "./globals.css"
 import Footer from "@/components/footer"
 import { cn } from "@/lib/utils"
 import { ThemeProvider } from "@/lib/theme-provider"
+import { getMessages } from "next-intl/server"
+import { NextIntlClientProvider } from "next-intl"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -12,13 +14,16 @@ export const metadata: Metadata = {
   description: "Simple tool to check if you miss some utm marketing link",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode
+  params: { locale: string }
 }>) {
+  const messages = await getMessages()
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link
           rel="apple-touch-icon"
@@ -43,10 +48,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#333333" />
       </head>
       <body className={cn(inter.className)}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

@@ -6,9 +6,12 @@ import UrlManager from "@/components/url"
 import UtmFileUpload from "@/components/utm-file-upload"
 import processFiles from "@/lib/file-read"
 import { findUrlsWithoutUTM, UrlValidator } from "@/lib/utm-checker"
+import { useTranslations } from "next-intl"
 import { useState } from "react"
 
 export default function Home() {
+  const t = useTranslations("Index")
+
   const [stringToCheck, setStringToCheck] = useState("")
   const [urlsWithErrors, setUrlsWIthErrors] = useState<UrlValidator[]>([])
   const [files, setFiles] = useState<File[] | null>([])
@@ -28,7 +31,7 @@ export default function Home() {
     <main className="container p-5 relative">
       <ThemeToggle />
       <h1 className="text-4xl text-center font-semibold my-5 text-primary">
-        Google Tracking UTM URL Validator
+        {t("title")}
       </h1>
       <section>
         <p>

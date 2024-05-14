@@ -1,0 +1,33 @@
+{
+  "Index": {
+    "title": "Google Tracking UTM URL Validator",
+    "description": "The Google Tracking URL Validator is a handy tool designed for validating URLs within files or text strings to ensure they are properly tracked with Google Analytics.",
+    "fileInput": {
+      "label": "File Input:",
+      "description": "Users can input files with extensions such as .HTML, .HTM, .MD, .MARKDOWN, or .TXT. The tool scans these files to extract URLs and verifies whether they are tagged correctly with Google Analytics parameters."
+    },
+    "textInput": {
+      "label": "Text Input:",
+      "description": "Alternatively, users can input a text string containing URLs. The tool parses the text to identify URLs and checks their tracking parameters against Google Analytics standards."
+    },
+    "functionality": {
+      "title": "Functionality",
+      "points": [
+        "URL Parsing: The tool extracts URLs from the provided files or text input, disregarding any other content.",
+        "Validation: It then examines each URL to ensure it contains the necessary tracking parameters prescribed by Google Analytics, such as UTM tags for campaign, source, medium, etc.",
+        "Error Reporting: If any URLs are found to be missing required tracking parameters, the tool generates a report highlighting these discrepancies for the user's attention.",
+        "Output: Users receive a comprehensive report detailing the status of each URL, indicating whether it is properly tracked or requires adjustment."
+      ]
+    },
+    "benefits": {
+      "title": "Benefits :",
+      "points": [
+        "Content Managers: Ensuring all outbound links within web content are properly tracked for campaign analysis.",
+        "Digital Marketers: Validating tracking parameters for links included in email campaigns or social media posts.",
+        "Website Administrators: Verifying tracking tags on various pages of a website to optimize data collection and analysis."
+      ]
+    },
+    "overallDescription": "Overall, the Google Tracking URL UTM Validator streamlines the process of confirming proper URL tracking, enhancing the reliability and effectiveness of data-driven marketing efforts utilizing Google Analytics.",
+    "checkButton": "Check all the url"
+  }
+}
