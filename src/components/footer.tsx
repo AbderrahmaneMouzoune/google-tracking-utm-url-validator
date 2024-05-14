@@ -6,7 +6,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 export default function Footer() {
   return (
     <footer className="bg-accent py-5 text-sm">
-      <section className="container flex justify-between">
+      <section className="container flex justify-between items-center">
         <p>
           © {new Date().getFullYear()}, Built by{" "}
           <Button variant={"link"} className="px-0 pr-1" asChild>
