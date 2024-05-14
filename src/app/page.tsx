@@ -1,4 +1,5 @@
 "use client"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { Textarea } from "@/components/ui/textarea"
 import UrlManager from "@/components/url"
@@ -24,11 +25,11 @@ export default function Home() {
   }
 
   return (
-    <main className="container p-5">
-      <h1 className="text-4xl text-center font-semibold my-5">
+    <main className="container p-5 relative">
+      <ThemeToggle />
+      <h1 className="text-4xl text-center font-semibold my-5 text-primary">
         Google Tracking UTM URL Validator
       </h1>
-
       <section>
         <p>
           The Google Tracking URL Validator is a handy tool designed for
@@ -51,11 +52,10 @@ export default function Home() {
           </li>
         </ol>
       </section>
-
       <form onSubmit={handleSubmitForm} className="mt-5">
-        <section className="grid grid-cols-2 gap-5">
+        <section className="grid md:grid-cols-2 gap-5">
           <Textarea
-            placeholder="Mettre le texte à vérifier ici"
+            placeholder={`<a href="https://google-tracking-utm-url-validator.vercel.app?utm_term=google">Exemple of link</a>`}
             onChange={(e) => setStringToCheck(e.currentTarget.value)}
           />
           <UtmFileUpload addFiles={setFiles} />
@@ -64,9 +64,7 @@ export default function Home() {
           Check all the url
         </Button>
       </form>
-
       {urlsWithErrors && <UrlManager urls={urlsWithErrors} />}
-
       <section>
         <h2>Functionality</h2>
 
