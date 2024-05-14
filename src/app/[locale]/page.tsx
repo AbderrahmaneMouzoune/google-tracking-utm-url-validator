@@ -34,92 +34,53 @@ export default function Home() {
         {t("title")}
       </h1>
       <section>
-        <p>
-          The Google Tracking URL Validator is a handy tool designed for
-          validating URLs within files or text strings to ensure they are
-          properly tracked with Google Analytics.
-        </p>
+        <p>{t("description")}</p>
 
         <ol className="list-decimal pl-8">
           <li>
-            <strong>File Input:</strong> Users can input files with extensions
-            such as .HTML, .HTM, .MD, .MARKDOWN, or .TXT. The tool scans these
-            files to extract URLs and verifies whether they are tagged correctly
-            with Google Analytics parameters.
+            <strong>{t("fileInput.label")}</strong> {t("fileInput.description")}
           </li>
           <li>
-            <strong>Text Input:</strong> Alternatively, users can input a text
-            string containing URLs. The tool parses the text to identify URLs
-            and checks their tracking parameters against Google Analytics
-            standards.
+            <strong>{t("textInput.label")}</strong> {t("textInput.description")}
           </li>
         </ol>
       </section>
       <form onSubmit={handleSubmitForm} className="mt-5">
         <section className="grid md:grid-cols-2 gap-5">
           <Textarea
-            placeholder={`<a href="https://google-tracking-utm-url-validator.vercel.app?utm_term=google">Exemple of link</a>`}
+            placeholder={t("placeholder")}
             onChange={(e) => setStringToCheck(e.currentTarget.value)}
           />
           <UtmFileUpload addFiles={setFiles} />
         </section>
         <Button type="submit" className="mt-2">
-          Check all the url
+          {t("checkButton")}
         </Button>
       </form>
       {urlsWithErrors && <UrlManager urls={urlsWithErrors} />}
       <section>
-        <h2>Functionality</h2>
+        <h2>{t("functionality")}</h2>
 
         <ul className="list-disc pl-8">
-          <li>
-            <strong>URL Parsing:</strong> The tool extracts URLs from the
-            provided files or text input, disregarding any other content.
-          </li>
-          <li>
-            <strong>Validation:</strong> It then examines each URL to ensure it
-            contains the necessary tracking parameters prescribed by Google
-            Analytics, such as UTM tags for campaign, source, medium, etc.
-          </li>
-          <li>
-            <strong>Error Reporting:</strong> If any URLs are found to be
-            missing required tracking parameters, the tool generates a report
-            highlighting these discrepancies for the user&apos;s attention.
-          </li>
-          <li>
-            <strong>Output:</strong> Users receive a comprehensive report
-            detailing the status of each URL, indicating whether it is properly
-            tracked or requires adjustment.
-          </li>
+          <li>{t("functionalityPoints.first")}</li>
+          <li>{t("functionalityPoints.second")}</li>
+          <li>{t("functionalityPoints.third")}</li>
+          <li>{t("functionalityPoints.forth")}</li>
         </ul>
 
         <br />
 
-        <h2>Benefits :</h2>
+        <h2>{t("benefits")}</h2>
 
         <ul className="list-decimal pl-8">
-          <li>
-            <strong>Content Managers:</strong> Ensuring all outbound links
-            within web content are properly tracked for campaign analysis.
-          </li>
-          <li>
-            <strong>Digital Marketers:</strong> Validating tracking parameters
-            for links included in email campaigns or social media posts.
-          </li>
-          <li>
-            <strong>Website Administrators:</strong> Verifying tracking tags on
-            various pages of a website to optimize data collection and analysis.
-          </li>
+          <li>{t("benefitsPoints.first")}</li>
+          <li>{t("benefitsPoints.second")}</li>
+          <li>{t("benefitsPoints.third")}</li>
         </ul>
 
         <br />
 
-        <p>
-          Overall, the Google Tracking URL UTM Validator streamlines the process
-          of confirming proper URL tracking, enhancing the reliability and
-          effectiveness of data-driven marketing efforts utilizing Google
-          Analytics.
-        </p>
+        <p>{t("overallDescription")}</p>
       </section>
     </main>
   )
