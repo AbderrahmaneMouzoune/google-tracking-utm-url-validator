@@ -68,8 +68,6 @@ export default function Home() {
       {urlsWithErrors && <UrlManager urls={urlsWithErrors} />}
 
       <section>
-        <br />
-
         <h2>Functionality</h2>
 
         <ul className="list-disc pl-8">
