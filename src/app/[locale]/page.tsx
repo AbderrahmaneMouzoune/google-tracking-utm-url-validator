@@ -48,7 +48,9 @@ export default function Home() {
       <form onSubmit={handleSubmitForm} className="mt-5">
         <section className="grid md:grid-cols-2 gap-5">
           <Textarea
-            placeholder={t("placeholder")}
+            placeholder={
+              "<a href='https://google-tracking-utm-url-validator.vercel.app?utm_source=newsletter&utm_campaign=exemple'>Google Tracking utm url validator</a>"
+            }
             onChange={(e) => setStringToCheck(e.currentTarget.value)}
           />
           <UtmFileUpload addFiles={setFiles} />

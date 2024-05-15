@@ -6,15 +6,15 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons"
 export default function Footer() {
   return (
     <footer className="bg-accent py-5 text-sm">
-      <section className="container flex justify-between items-center">
+      <section className="container flex flex-col md:flex-row gap-5 justify-between items-center">
         <p>
-          © {new Date().getFullYear()}, Built by{" "}
+          <span>© {new Date().getFullYear()}, Built by </span>
           <Button variant={"link"} className="px-0 pr-1" asChild>
             <Link href={"https://abderrahmanemouzoune.com"}>
               Abderrahmane Mouzoune.
             </Link>
           </Button>
-          and powered by{" "}
+          <span>and powered by </span>
           <Button variant={"link"} className="px-0" asChild>
             <Link href={"https://www.youzoune.com"}>youzoune.com</Link>
           </Button>

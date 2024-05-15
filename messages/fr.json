@@ -1,29 +1,29 @@
 {
   "Index": {
     "title": "Google Tracking UTM URL Validator",
-    "description": "The Google Tracking URL Validator is a handy tool designed for validating URLs within files or text strings to ensure they are properly tracked with Google Analytics.",
+    "description": "Google Tracking UTM URL Validator (GTUUV) est un outil pratique conçu pour valider les URLs dans les fichiers ou les chaînes de texte afin de garantir qu'elles sont correctement suivies avec Google Analytics.",
     "fileInput": {
-      "label": "File Input:",
-      "description": "Users can input files with extensions such as .HTML, .HTM, .MD, .MARKDOWN, or .TXT. The tool scans these files to extract URLs and verifies whether they are tagged correctly with Google Analytics parameters."
+      "label": "Via fichiers :",
+      "description": "Il est possible de mettre des fichiers avec des extensions telles que .HTML, .HTM, .MD, .MARKDOWN ou .TXT. L'outil analyse ces fichiers pour extraire les URLs et vérifie si elles sont correctement balisées (possède bien des utm) avec les paramètres de suivi de Google Analytics."
     },
     "textInput": {
-      "label": "Text Input:",
-      "description": "Alternatively, users can input a text string containing URLs. The tool parses the text to identify URLs and checks their tracking parameters against Google Analytics standards."
+      "label": "Via texte :",
+      "description": "Vous pouvez aussi directement saisir une chaîne de texte avec des utms. L'outil analyse le texte pour identifier les URL et vérifie leurs paramètres de suivi par rapport aux normes de Google Analytics."
     },
-    "functionality": "Functionality",
+    "functionality": "Fonctionnalités",
     "functionalityPoints": {
-      "first": "URL Parsing: The tool extracts URLs from the provided files or text input, disregarding any other content.",
-      "second": "Validation: It then examines each URL to ensure it contains the necessary tracking parameters prescribed by Google Analytics, such as UTM tags for campaign, source, medium, etc.",
-      "third": "Error Reporting: If any URLs are found to be missing required tracking parameters, the tool generates a report highlighting these discrepancies for the user's attention.",
-      "forth": "Output: Users receive a comprehensive report detailing the status of each URL, indicating whether it is properly tracked or requires adjustment."
+      "first": "Analyse d'URL : L'outil extrait les URL des fichiers fournis ou de l'entrée de texte, en ignorant tout autre contenu.",
+      "second": "Validation : Il examine ensuite chaque URL pour s'assurer qu'elle contient les paramètres de suivi nécessaires prescrits par Google Analytics, tels que les balises UTM Campaign, UTM Source, UTM Medium, etc...",
+      "third": "Rapport d'erreurs : Si des URL sont trouvées sans les paramètres de suivi requis, l'outil génère un rapport mettant en évidence ces écarts pour l'attention de l'utilisateur.",
+      "forth": "Sortie : Les utilisateurs reçoivent un rapport détaillé sur le statut de chaque URL, indiquant si elle est correctement suivie ou nécessite des ajustements."
     },
-    "benefits": "Benefits :",
+    "benefits": "Avantages :",
     "benefitsPoints": {
-      "first": "Content Managers: Ensuring all outbound links within web content are properly tracked for campaign analysis.",
-      "second": "Digital Marketers: Validating tracking parameters for links included in email campaigns or social media posts.",
-      "third": "Website Administrators: Verifying tracking tags on various pages of a website to optimize data collection and analysis."
+      "first": "Gestionnaires de contenu : Garantir que tous les liens sortants dans le contenu web sont correctement suivis pour l'analyse de campagne.",
+      "second": "Marketeurs digitaux : Validation des paramètres de suivi pour les liens inclus dans les campagnes par e-mail ou les publications sur les médias sociaux.",
+      "third": "Administrateurs de site web : Vérification des balises de suivi sur différentes pages d'un site web pour optimiser la collecte et l'analyse de données."
   },
-    "overallDescription": "Overall, the Google Tracking URL UTM Validator streamlines the process of confirming proper URL tracking, enhancing the reliability and effectiveness of data-driven marketing efforts utilizing Google Analytics.",
-    "checkButton": "Check all the url"
+    "overallDescription": "Google Tracking UTM URL Validator (GTUUV) vérifie que les URLs que vous voulez partagez soient bien tracké par Google Analytics, améliorant ainsi la fiabilité et l'efficacité des efforts de l'équipe Marketing.",
+    "checkButton": "Vérifier toutes les URL"
   }
 }

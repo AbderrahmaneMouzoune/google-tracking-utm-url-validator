@@ -47,9 +47,19 @@ export default async function RootLayout({
         <meta name="msapplication-TileColor" content="#333333" />
         <meta name="theme-color" content="#333333" />
       </head>
-      <body className={cn(inter.className)}>
+      <body
+        className={cn(
+          inter.className,
+          "flex flex-col justify-between min-h-screen"
+        )}
+      >
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
             {children}
             <Footer />
           </ThemeProvider>
