@@ -1,18 +1,18 @@
-"use client"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import UrlManager from "@/components/url"
-import UtmFileUpload from "@/components/utm-file-upload"
-import processFiles from "@/lib/file-read"
-import { findUrlsWithoutUTM, UrlValidator } from "@/lib/utm-checker"
-import { useTranslations } from "next-intl"
-import { useState } from "react"
+'use client'
+import { ThemeToggle } from '@/components/theme-toggle'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import UrlManager from '@/components/url'
+import UtmFileUpload from '@/components/utm-file-upload'
+import processFiles from '@/lib/file-read'
+import { findUrlsWithoutUTM, UrlValidator } from '@/lib/utm-checker'
+import { useTranslations } from 'next-intl'
+import { useState } from 'react'
 
 export default function Home() {
-  const t = useTranslations("Index")
+  const t = useTranslations('Index')
 
-  const [stringToCheck, setStringToCheck] = useState("")
+  const [stringToCheck, setStringToCheck] = useState('')
   const [urlsWithErrors, setUrlsWIthErrors] = useState<UrlValidator[]>([])
   const [files, setFiles] = useState<File[] | null>([])
 
@@ -28,20 +28,19 @@ export default function Home() {
   }
 
   return (
-    <main className="container p-5 relative">
-      <ThemeToggle />
+    <main className="container p-5">
       <h1 className="text-4xl text-center font-semibold my-5 text-primary">
-        {t("title")}
+        {t('title')}
       </h1>
       <section>
-        <p>{t("description")}</p>
+        <p>{t('description')}</p>
 
         <ol className="list-decimal pl-8">
           <li>
-            <strong>{t("fileInput.label")}</strong> {t("fileInput.description")}
+            <strong>{t('fileInput.label')}</strong> {t('fileInput.description')}
           </li>
           <li>
-            <strong>{t("textInput.label")}</strong> {t("textInput.description")}
+            <strong>{t('textInput.label')}</strong> {t('textInput.description')}
           </li>
         </ol>
       </section>
@@ -56,33 +55,33 @@ export default function Home() {
           <UtmFileUpload addFiles={setFiles} />
         </section>
         <Button type="submit" className="mt-2">
-          {t("checkButton")}
+          {t('checkButton')}
         </Button>
       </form>
       {urlsWithErrors && <UrlManager urls={urlsWithErrors} />}
       <section>
-        <h2>{t("functionality")}</h2>
+        <h2>{t('functionality')}</h2>
 
         <ul className="list-disc pl-8">
-          <li>{t("functionalityPoints.first")}</li>
-          <li>{t("functionalityPoints.second")}</li>
-          <li>{t("functionalityPoints.third")}</li>
-          <li>{t("functionalityPoints.forth")}</li>
+          <li>{t('functionalityPoints.first')}</li>
+          <li>{t('functionalityPoints.second')}</li>
+          <li>{t('functionalityPoints.third')}</li>
+          <li>{t('functionalityPoints.forth')}</li>
         </ul>
 
         <br />
 
-        <h2>{t("benefits")}</h2>
+        <h2>{t('benefits')}</h2>
 
         <ul className="list-decimal pl-8">
-          <li>{t("benefitsPoints.first")}</li>
-          <li>{t("benefitsPoints.second")}</li>
-          <li>{t("benefitsPoints.third")}</li>
+          <li>{t('benefitsPoints.first')}</li>
+          <li>{t('benefitsPoints.second')}</li>
+          <li>{t('benefitsPoints.third')}</li>
         </ul>
 
         <br />
 
-        <p>{t("overallDescription")}</p>
+        <p>{t('overallDescription')}</p>
       </section>
     </main>
   )

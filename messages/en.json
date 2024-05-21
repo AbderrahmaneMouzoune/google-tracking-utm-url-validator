@@ -22,7 +22,7 @@
       "first": "Content Managers: Ensuring all outbound links within web content are properly tracked for campaign analysis.",
       "second": "Digital Marketers: Validating tracking parameters for links included in email campaigns or social media posts.",
       "third": "Website Administrators: Verifying tracking tags on various pages of a website to optimize data collection and analysis."
-  },
+    },
     "overallDescription": "Overall, the Google Tracking URL UTM Validator streamlines the process of confirming proper URL tracking, enhancing the reliability and effectiveness of data-driven marketing efforts utilizing Google Analytics.",
     "checkButton": "Check all the url"
   }

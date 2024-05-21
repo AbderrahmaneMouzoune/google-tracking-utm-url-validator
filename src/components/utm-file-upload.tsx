@@ -1,12 +1,12 @@
-"use client"
+'use client'
 import {
   FileInput,
   FileUploader,
   FileUploaderContent,
   FileUploaderItem,
-} from "@/components/ui/file-uploader"
-import { Paperclip } from "lucide-react"
-import { useState } from "react"
+} from '@/components/ui/file-uploader'
+import { Paperclip } from 'lucide-react'
+import { useState } from 'react'
 
 export default function UtmFileUpload({
   addFiles,
@@ -21,7 +21,7 @@ export default function UtmFileUpload({
 
   const dropZoneConfig = {
     accept: {
-      "text/html": [".html", ".htm", ".txt", ".md", ".markdown"],
+      'text/html': ['.html', '.htm', '.txt', '.md', '.markdown'],
     },
     maxFiles: 5,
     maxSize: 1024 * 1024 * 4,
