@@ -32,7 +32,7 @@ export default function LocaleSwitcherSelect() {
         // are used in combination with a given `pathname`. Since the two will
         // always match for the current route, we can skip runtime checks.
         { pathname, params },
-        { locale },
+        { locale }
       )
     })
   }
@@ -47,7 +47,7 @@ export default function LocaleSwitcherSelect() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         {locales.map((curr) => (
-          <DropdownMenuItem onClick={() => changeToLocale(curr)}>
+          <DropdownMenuItem key={curr} onClick={() => changeToLocale(curr)}>
             {flagByLocal[curr] ? flagByLocal[curr] : curr}
           </DropdownMenuItem>
         ))}
