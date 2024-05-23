@@ -1,0 +1,29 @@
+{
+  "Index": {
+    "title": "Google Tracking UTM URL Validator",
+    "description": "Google Tracking UTM URL Validator (GTUUV) est un outil pratique conçu pour valider les URLs dans les fichiers ou les chaînes de texte afin de garantir qu'elles sont correctement suivies avec Google Analytics.",
+    "fileInput": {
+      "label": "Via fichiers :",
+      "description": "Il est possible de mettre des fichiers avec des extensions telles que .HTML, .HTM, .MD, .MARKDOWN ou .TXT. L'outil analyse ces fichiers pour extraire les URLs et vérifie si elles sont correctement balisées (possède bien des utm) avec les paramètres de suivi de Google Analytics."
+    },
+    "textInput": {
+      "label": "Via texte :",
+      "description": "Vous pouvez aussi directement saisir une chaîne de texte avec des utms. L'outil analyse le texte pour identifier les URL et vérifie leurs paramètres de suivi par rapport aux normes de Google Analytics."
+    },
+    "functionality": "Fonctionnalités",
+    "functionalityPoints": {
+      "first": "Analyse d'URL : L'outil extrait les URL des fichiers fournis ou de l'entrée de texte, en ignorant tout autre contenu.",
+      "second": "Validation : Il examine ensuite chaque URL pour s'assurer qu'elle contient les paramètres de suivi nécessaires prescrits par Google Analytics, tels que les balises UTM Campaign, UTM Source, UTM Medium, etc...",
+      "third": "Rapport d'erreurs : Si des URL sont trouvées sans les paramètres de suivi requis, l'outil génère un rapport mettant en évidence ces écarts pour l'attention de l'utilisateur.",
+      "forth": "Sortie : Les utilisateurs reçoivent un rapport détaillé sur le statut de chaque URL, indiquant si elle est correctement suivie ou nécessite des ajustements."
+    },
+    "benefits": "Avantages :",
+    "benefitsPoints": {
+      "first": "Gestionnaires de contenu : Garantir que tous les liens sortants dans le contenu web sont correctement suivis pour l'analyse de campagne.",
+      "second": "Marketeurs digitaux : Validation des paramètres de suivi pour les liens inclus dans les campagnes par e-mail ou les publications sur les médias sociaux.",
+      "third": "Administrateurs de site web : Vérification des balises de suivi sur différentes pages d'un site web pour optimiser la collecte et l'analyse de données."
+    },
+    "overallDescription": "Google Tracking UTM URL Validator (GTUUV) vérifie que les URLs que vous voulez partagez soient bien tracké par Google Analytics, améliorant ainsi la fiabilité et l'efficacité des efforts de l'équipe Marketing.",
+    "checkButton": "Vérifier toutes les URL"
+  }
+}

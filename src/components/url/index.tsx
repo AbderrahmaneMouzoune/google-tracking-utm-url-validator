@@ -1,10 +1,10 @@
-import { DataTable } from "@/components/ui/data-table"
-import { UrlWithError, columns } from "./columns"
-import { useState } from "react"
-import { Button } from "../ui/button"
-import { cn } from "@/lib/utils"
-import { Checkbox } from "../ui/checkbox"
-import { Label } from "../ui/label"
+import { DataTable } from '@/components/ui/data-table'
+import { UrlWithError, columns } from './columns'
+import { useState } from 'react'
+import { Button } from '../ui/button'
+import { cn } from '@/lib/utils'
+import { Checkbox } from '../ui/checkbox'
+import { Label } from '../ui/label'
 
 type Props = {
   urls: UrlWithError[]
@@ -33,8 +33,8 @@ export default function UrlManager({ urls }: Props) {
 
         <div>
           <p className="text-sm">
-            {" "}
-            Number of url {urls.length}, Number of url with missing utm :{" "}
+            {' '}
+            Number of url {urls.length}, Number of url with missing utm :{' '}
             {urls.filter((url) => url.missingParameters.length > 0).length}
           </p>
         </div>
