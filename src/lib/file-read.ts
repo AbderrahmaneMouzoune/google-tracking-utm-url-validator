@@ -1,6 +1,6 @@
 export default function processFiles(
   files: File[],
-  callback: (content: string) => void
+  callback: (content: string) => void,
 ) {
   const fileContents: string[] = []
 
@@ -15,7 +15,7 @@ export default function processFiles(
 
         // Check URLs without UTM parameters in the file content
         if (fileContents.length === files.length) {
-          const combinedContent = fileContents.join("\n") // Combine contents if multiple files
+          const combinedContent = fileContents.join('\n') // Combine contents if multiple files
           callback(combinedContent)
         }
       }
