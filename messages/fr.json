@@ -1,4 +1,7 @@
 {
+  "Metadata": {
+    "description": "Vérifier dans un fichier ou sur de longue chaines de caractère s'il vous manque des tag utm"
+  },
   "Index": {
     "title": "Google Tracking UTM URL Validator",
     "description": "Google Tracking UTM URL Validator (GTUUV) est un outil pratique conçu pour valider les URLs dans les fichiers ou les chaînes de texte afin de garantir qu'elles sont correctement suivies avec Google Analytics.",
