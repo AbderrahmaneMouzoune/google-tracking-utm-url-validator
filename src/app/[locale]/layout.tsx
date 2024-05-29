@@ -4,15 +4,26 @@ import './globals.css'
 import Footer from '@/components/footer'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/lib/theme-provider'
-import { getMessages } from 'next-intl/server'
-import { NextIntlClientProvider } from 'next-intl'
+import { getMessages, getTranslations } from 'next-intl/server'
+import { NextIntlClientProvider, useTranslations } from 'next-intl'
 import Header from '@/components/header'
+import { Locale } from '@/config'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Google Tracking UTM URL Validator',
-  description: 'Simple tool to check if you miss some utm marketing link',
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: {
+    locale: Locale
+  }
+}) {
+  const t = await getTranslations({ locale, namespace: 'Metadata' })
+
+  return {
+    title: 'Google Tracking UTM URL Validator',
+    description: t('description'),
+  }
 }
 
 export default async function RootLayout({
@@ -51,7 +62,7 @@ export default async function RootLayout({
       <body
         className={cn(
           inter.className,
-          'flex flex-col justify-between min-h-screen',
+          'flex flex-col justify-between min-h-screen'
         )}
       >
         <NextIntlClientProvider messages={messages}>

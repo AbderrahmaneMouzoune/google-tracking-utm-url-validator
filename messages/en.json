@@ -1,4 +1,7 @@
 {
+  "Metadata": {
+    "description": "Drop large file or large text and check if you miss some utm tag"
+  },
   "Index": {
     "title": "Google Tracking UTM URL Validator",
     "description": "The Google Tracking URL Validator is a handy tool designed for validating URLs within files or text strings to ensure they are properly tracked with Google Analytics.",
